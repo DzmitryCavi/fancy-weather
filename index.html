@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Weather</title>
+  <link href="assets/css/vendors.6f77927a754910cdba34.css" rel="stylesheet"><link href="assets/css/app.6f77927a754910cdba34.css" rel="stylesheet"></head>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="tools nav-wrapper blue-grey">
+          <ul class="left">
+            <li>
+              <a class="tool_refresh-button waves-effect waves-light btn "
+                ><i class="material-icons ">replay</i></a
+              >
+            </li>
+            <li>
+              <a class="tool_fahrenheit-button waves-effect waves-light btn "
+                >℉
+              </a>
+            </li>
+            <li>
+              <a class="tool_celsius-button waves-effect waves-light btn">℃ </a>
+            </li>
+            <li>
+              <select class="lang-container__select-lang waves-effect waves-light btn">
+                <option class="select-lang__option" id='en'>EN</option>
+                <option class="select-lang__option" id='ru'>RU</option>
+                <option class="select-lang__option" id='be'>BE</option>
+                <option class="select-lang__option" id='de'>DE</option>
+                <option class="select-lang__option" id='it'>IT</option>
+              </select>
+            </li>
+        </div>
+      </nav>
+    </div>
+    <main class="main row">
+      <div class="tool_search-form col m5 l5 s12 offset-m7 offset-l7 row">
+        <input
+          class="search-form__input col s12 m7 l7"
+          type="text"
+          pattern="[A-Za-zА-Яа-яЁё]"
+          required=""
+          placeholder="City"
+        />
+        <button class="search-form__button waves-effect waves-light btn col s3" type="submit"><i class="material-icons ">search</i></button>
+      </div>
+      <div class="main__weather-info col s12 l7 m7">
+        <div class="main__location">
+          <span class="location__city"> Минск, </span>
+          <span class="location__country">Беларусь</span>
+        </div>
+        <div class="main__data-and-time"></div>
+        <div class="main__info">
+          <div class="info__weather row">
+            <div class="weather__temp degreesSwitcher h1 col s8 l6 m6"></div>
+            <div class="weather__value col s4 l6 m6">
+              <div class="value__item">
+                <i class="material-icons" id="main_weather-icon">wb_cloudy</i>
+                <div class="value__item sky"></div>
+                <div class="tempr degreesSwitcher">
+                  
+                </div>
+                <div class="value__item wind">
+                  
+                </div>
+                
+                <div class="value__item humid">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info__weather-days row">
+            <div class="info__weather-days__1 col s4 l3 m3 row">
+              <div class="info__weather-days__1__day col s12"></div>
+              <div class="info__weather-days__1__temp col s6"></div>
+              <i class="info__weather-days__1__icon material-icons col s6">wb_cloudy</i>
+            </div>
+            <div class="info__weather-days__2 col s4 l3 m3 row">
+              <div class="info__weather-days__2__day col s12"></div>
+              <div class="info__weather-days__2__temp col s6"></div>
+              <i class="info__weather-days__2__icon material-icons col s6">wb_cloudy</i>
+            </div>
+            <div class="info__weather-days__3 col s4 l3 m3 row">
+              <div class="info__weather-days__3__day col s12"></div>
+              <div class="info__weather-days__3__temp col s6"></div>
+              <div class="col s6"><i class="info__weather-days__3__icon material-icons">wb_cloudy</i></div>
+              
+            </div>
+            <div class="info__weather-days__3 col s3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="map-form col s12 l5 m5">
+        <div id="map"></div>
+        <p class="map__locate"></p>
+      </div>
+   
+    </main>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=198b8a49-d8d6-4c2e-bddf-26b7942f043c"
+      type="text/javascript"
+    ></script>
+  <script type="text/javascript" src="assets/js/vendors.6f77927a754910cdba34.js"></script><script type="text/javascript" src="assets/js/app.6f77927a754910cdba34.js"></script></body>
+</html>
